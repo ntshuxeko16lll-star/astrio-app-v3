@@ -39,3 +39,7 @@ signupBtn.onclick = async () => {
     alert("Account created. Check your email.");
   }
 };
+document.getElementById("logout-btn").onclick = async () => {
+  await supabase.auth.signOut();
+  window.location.href = "index.html";
+};
